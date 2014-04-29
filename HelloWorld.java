@@ -68,8 +68,8 @@ public class HelloWorld extends Strategy {
                 lma5= ma5;// talib_data("lma5");
                 lma3= ma3;//talib_data("lma3");
 
-                ma3 = getData("ma3");
-                ma5 = getData("ma5");
+                ma3 = getData("ma10");
+                ma5 = getData("ma50");
 
                 if(ma3>ma5 && lma3<= lma5)
                 {
