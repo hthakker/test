@@ -83,7 +83,7 @@ public class HelloWorld extends Strategy {
                         closeAllPositions(symbol);
 
                     }
-                    log("ID: "+order(OrderType.Market,symbol, 150));
+                    log("ID: "+order(OrderType.Market,symbol, 2000));
 
 
                         
