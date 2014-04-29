@@ -1,5 +1,4 @@
 import java.math.BigDecimal;
-
 import com.breezetrader.Context;
 import com.breezetrader.Event;
 import com.breezetrader.OrderType;
@@ -11,7 +10,7 @@ import com.breezetrader.Tick;
 *  http://docs.breezetrader.com
 *
 */
-public class EmaCrossover extends Strategy {
+public class HelloWorld extends Strategy {
 
         // This is for trending market
         boolean flag = false;
