@@ -30,10 +30,8 @@ public class HelloWorld extends Strategy {
                         initTALib("ma", "ma50", "50","Ema", symbol, "close" );
 
                       //  talib_init("lookback", "lma5",  "5", "ma5");
-
                        // talib_init("lookback", "lma3",  "5", "ma3");
                         context.setDataFrequency(1, Context.Frequency.DAY);
-
                         context.setSymbols(symbol);
                         //context.setDataURL("https://s3-ap-southeast-1.amazonaws.com/breezetrader-test/EU0009652759.csv");
 
