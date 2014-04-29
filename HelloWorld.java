@@ -26,8 +26,8 @@ public class HelloWorld extends Strategy {
         public void initialize(Context context)
         {
 
-                        initTALib("ma", "ma3", "3","Ema", symbol, "close" );
-                        initTALib("ma", "ma5", "5","Ema", symbol, "close" );
+                        initTALib("ma", "ma10", "10","Ema", symbol, "close" );
+                        initTALib("ma", "ma50", "50","Ema", symbol, "close" );
 
                       //  talib_init("lookback", "lma5",  "5", "ma5");
 
@@ -70,10 +70,6 @@ public class HelloWorld extends Strategy {
 
                 ma3 = getData("ma3");
                 ma5 = getData("ma5");
-
-
-
-
 
                 if(ma3>ma5 && lma3<= lma5)
                 {
