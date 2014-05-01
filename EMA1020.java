@@ -10,19 +10,15 @@ public class EMA1020 extends Strategy {
 	boolean flag = false;
 	String symbol = "HINDUNILVR";
 	double qty = 100;
-	double prev_rsi9, rsi9,rsi14=0;
-	double sar=0;
+	double ema10 = 0;
 	/*
 	*  initialize your context, 
 	*  technical indicators other variables
 	*/
 	public void initialize(Context context)	{	
 
-	//		initTALib("adx","adx", "14", "9", symbol, "close" );
-			initTALib("rsi","rsi14", "14", symbol, "close" );
-			initTALib("rsi","rsi9", "9", symbol, "close" );
-			initTALib("sar","sar","0.92", "0.2", symbol, "close");
-			
+			initTALib("ma","ema10", "10", "ema" symbol, "close" );
+
 			context.setDataFrequency(1, Context.Frequency.DAY);
 			context.setSymbols(symbol);
 			context.setPortfolioValue(BigDecimal.valueOf(100000));
@@ -33,39 +29,26 @@ public class EMA1020 extends Strategy {
 	}
 	
 	 public void onEvent(Object object) {
-    	prev_rsi9 = rsi9;
-    	
-    	sar = getData("sar");
-    	rsi9 = getData("rsi9");
-		rsi14 = getData("rsi14");
-	    log("SAR: "+sar);
-	    log("RSI9: "+rsi9);
-	    log("RSI14: "+rsi14);
-        
-        if( rsi9 > 50 && prev_rsi9 <=50) {
+    	prev_ema10 = ema10;
+
+    	ema10 = getData("ema10");
+
+        if(ema10 > prev_ema10) {
                     
             log("openpositions: "+getPosition(symbol));
             if(getPosition(symbol) < 0){
                 closeAllPositions(symbol);
             }
 
-        //log("ID: "+order(OrderType.Market, symbol, qty));
         log("ID: "+order(OrderType.Market,symbol, 100));
 
         }
     
-        if(rsi9 < 50 && prev_rsi9 >=50) {
+        if(ema10 < prev_ema10) {
             log("openpositions: "+getPosition(symbol));
             if(getPosition(symbol) > 0){
                 closeAllPositions(symbol);
             }
-
-        //log("ID: "+order(OrderType.Market,symbol, -75));
-
         }
-
-
 	 }
-	 
-	 
 }
