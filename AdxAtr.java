@@ -13,8 +13,7 @@ public class AdxAtr extends Strategy {
 	*  initialize your context, 
 	*  technical indicators other variables
 	*/
-	public void initialize(Context context)
-	{	
+	public void initialize(Context context)	{	
 			initTALib("adx","adx", "14", "9", symbol, close );
 			context.setDataFrequency(2, Context.Frequency.DAY);
 			context.setSymbols(symbol);
@@ -40,3 +39,4 @@ public class AdxAtr extends Strategy {
 		log("current Time: "+getTimeStamp());
     }
 	
+}
