@@ -17,7 +17,7 @@ public class EMA1020 extends Strategy {
 	*/
 	public void initialize(Context context)	{	
 
-			initTALib("ema","ema10", "10", symbol, "close" );
+        initTALib("ma", "ema10", "10","Ema", symbol, "close" );
 
 			context.setDataFrequency(1, Context.Frequency.DAY);
 			context.setSymbols(symbol);
