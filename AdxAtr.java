@@ -24,6 +24,8 @@ public class AdxAtr extends Strategy {
 			context.setStartDate("01-01-2013");
 			context.setEndDate("31-12-2013");
 			log("Initialized");
+			double rsi14 = getData("rsi14");
+		    log("RSI14: "+rsi14 + "\n");
 	}
 	
 	/*
