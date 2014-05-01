@@ -22,8 +22,10 @@ public class AdxAtr extends Strategy {
 			context.setSymbols(symbol);
 			context.setPortfolioValue(BigDecimal.valueOf(100000));
 			context.setDataType(Event.Type.BAR);
-			context.setStartDate("01-01-2013");
-			context.setEndDate("31-12-2013");
+            context.setStartDate("01-01-2011");
+            context.setEndDate("31-12-2013");
+			
+			rsi14 = 0;
 			log("Initialized");
 			rsi14 = getData("rsi14");
 		    log("RSI14: "+rsi14 + "\n");
