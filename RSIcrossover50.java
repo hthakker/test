@@ -10,7 +10,7 @@ public class RSIcrossover50 extends Strategy {
 	boolean flag = false;
 	String symbol = "HINDUNILVR";
 	double qty = 100;
-	double rsi9,rsi14=0;
+	double prev_rsi9, rsi9,rsi14=0;
 	/*
 	*  initialize your context, 
 	*  technical indicators other variables
@@ -48,7 +48,7 @@ public class RSIcrossover50 extends Strategy {
 
         }
     
-        if(rsi9 < 50 && prev_rsi >=50) {
+        if(rsi9 < 50 && prev_rsi9 >=50) {
             log("openpositions: "+getPosition(symbol));
             if(getPosition(symbol) > 0){
                 closeAllPositions(symbol);
