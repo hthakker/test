@@ -17,7 +17,7 @@ public class EMA1020 extends Strategy {
 	*/
 	public void initialize(Context context)	{	
 
-			initTALib("ma","ema10", "10", "ema", symbol, "close" );
+			initTALib("ema","ema10", "10", symbol, "close" );
 
 			context.setDataFrequency(1, Context.Frequency.DAY);
 			context.setSymbols(symbol);
@@ -29,8 +29,8 @@ public class EMA1020 extends Strategy {
 	}
 	
 	 public void onEvent(Object object) {
+    	
     	prev_ema10 = ema10;
-
     	ema10 = getData("ema10");
 
         if(ema10 > prev_ema10) {
@@ -39,8 +39,7 @@ public class EMA1020 extends Strategy {
             if(getPosition(symbol) < 0){
                 closeAllPositions(symbol);
             }
-
-        log("ID: "+order(OrderType.Market,symbol, 100));
+            log("ID: "+order(OrderType.Market,symbol, 100));
 
         }
     
