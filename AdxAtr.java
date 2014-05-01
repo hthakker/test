@@ -15,16 +15,14 @@ public class AdxAtr extends Strategy {
 	*/
 	public void initialize(Context context)	{	
 
-
-	
 			initTALib("adx","adx", "14", "9", symbol, "close" );
 			initTALib("rsi","rsi14", "14", symbol, "close" );
 			context.setDataFrequency(1, Context.Frequency.DAY);
 			context.setSymbols(symbol);
 			context.setPortfolioValue(BigDecimal.valueOf(100000));
 			context.setDataType(Event.Type.BAR);
-			context.setStartDate("03-9-2012");
-			context.setEndDate("31-10-2012");
+			context.setStartDate("01-01-2013");
+			context.setEndDate("31-12-2013");
 			log("Initialized");
 	}
 	
