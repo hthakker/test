@@ -28,10 +28,4 @@ public class AdxAtr extends Strategy {
 		    log("RSI14: "+rsi14 + "\n");
 	}
 	
-	/*
-	*  onEvent is the callback when a market event happens. 
-	*  The behaviour of how this is called depends on the context 
-	*  object you intialized in intialize(Context context) 
-	*/
-
 }
