@@ -10,7 +10,7 @@ public class EMA1020 extends Strategy {
 	boolean flag = false;
 	String symbol = "HINDUNILVR";
 	double qty = 100;
-	double ema10 = 0;
+	double ema10, prev_ema10 = 0;
 	/*
 	*  initialize your context, 
 	*  technical indicators other variables
