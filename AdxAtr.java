@@ -28,4 +28,9 @@ public class AdxAtr extends Strategy {
 		    log("RSI14: "+rsi14 + "\n");
 	}
 	
+	 public void onEvent(Object object) {
+	     
+	 }
+	 
+	 
 }
