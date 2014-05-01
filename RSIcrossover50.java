@@ -44,7 +44,7 @@ public class RSIcrossover50 extends Strategy {
                 closeAllPositions(symbol);
             }
 
-        log("ID: "+order(OrderType.Market,symbol, qty));
+        log("ID: "+order(OrderType.Market, symbol, qty));
 
         }
     
