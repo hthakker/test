@@ -9,7 +9,7 @@ public class AdxAtr extends Strategy {
 	
 	boolean flag = false;
 	String symbol = "HINDUNILVR";
-	double rsi14;
+	double rsi9,rsi14=0;
 	/*
 	*  initialize your context, 
 	*  technical indicators other variables
@@ -18,6 +18,7 @@ public class AdxAtr extends Strategy {
 
 	//		initTALib("adx","adx", "14", "9", symbol, "close" );
 			initTALib("rsi","rsi14", "14", symbol, "close" );
+			initTALib("rsi","rsi9", "9", symbol, "close" );
 			context.setDataFrequency(1, Context.Frequency.DAY);
 			context.setSymbols(symbol);
 			context.setPortfolioValue(BigDecimal.valueOf(100000));
@@ -25,10 +26,11 @@ public class AdxAtr extends Strategy {
             context.setStartDate("01-01-2011");
             context.setEndDate("31-12-2013");
 			
-			rsi14 = 0;
 			log("Initialized");
+			rsi9 = getData("rsi9");
 			rsi14 = getData("rsi14");
-		    log("RSI14: "+rsi14 + "\n");
+		    log("RSI9: "+rsi9);
+		    log("RSI14: "+rsi14);
 	}
 	
 	 public void onEvent(Object object) {
