@@ -33,6 +33,7 @@ public class EMA1020 extends Strategy {
     	prev_ema10 = ema10;
     	ema10 = getData("ema10");
         log("EMA: "= ema10);
+        
         if(ema10 > prev_ema10) {
                     
             log("openpositions: "+getPosition(symbol));
@@ -40,14 +41,15 @@ public class EMA1020 extends Strategy {
                 closeAllPositions(symbol);
             }
             log("ID: "+order(OrderType.Market,symbol, 100));
-
         }
     
         if(ema10 < prev_ema10) {
             log("openpositions: "+getPosition(symbol));
+                        
             if(getPosition(symbol) > 0){
                 closeAllPositions(symbol);
             }
+            log("ID: "+order(OrderType.Market,symbol, -100));
         }
 	 }
 }
