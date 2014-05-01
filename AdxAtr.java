@@ -25,16 +25,15 @@ public class AdxAtr extends Strategy {
 			context.setDataType(Event.Type.BAR);
             context.setStartDate("01-01-2011");
             context.setEndDate("31-12-2013");
-			
 			log("Initialized");
-			rsi9 = getData("rsi9");
-			rsi14 = getData("rsi14");
-		    log("RSI9: "+rsi9);
-		    log("RSI14: "+rsi14);
 	}
 	
 	 public void onEvent(Object object) {
-	     
+    	rsi9 = getData("rsi9");
+		rsi14 = getData("rsi14");
+	    log("RSI9: "+rsi9);
+	    log("RSI14: "+rsi14);
+
 	 }
 	 
 	 
