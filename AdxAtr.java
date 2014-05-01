@@ -8,12 +8,15 @@ import com.breezetrader.Tick;
 public class AdxAtr extends Strategy {
 	
 	boolean flag = false;
-	String symbol = "HINDUNILVR";
+
 	/*
 	*  initialize your context, 
 	*  technical indicators other variables
 	*/
 	public void initialize(Context context)	{	
+
+	String symbol = "HINDUNILVR";
+	
 			initTALib("adx","adx", "14", "9", symbol, close );
 			context.setDataFrequency(2, Context.Frequency.DAY);
 			context.setSymbols(symbol);
