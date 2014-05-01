@@ -9,6 +9,7 @@ public class AdxAtr extends Strategy {
 	
 	boolean flag = false;
 	String symbol = "HINDUNILVR";
+	double qty = 100;
 	double rsi9,rsi14=0;
 	/*
 	*  initialize your context, 
