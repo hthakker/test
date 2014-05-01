@@ -18,6 +18,7 @@ public class AdxAtr extends Strategy {
 
 	
 			initTALib("adx","adx", "14", "9", symbol, "close" );
+			initTALib("rsi","rsi14", "14", symbol, "close" );
 			context.setDataFrequency(1, Context.Frequency.DAY);
 			context.setSymbols(symbol);
 			context.setPortfolioValue(BigDecimal.valueOf(100000));
@@ -35,8 +36,9 @@ public class AdxAtr extends Strategy {
 	
 	public void onEvent(Object object) {
 		double adx = getData("adx");
-		double rsi1 = getData("rsi1");
-		log("ADX: "+adx + "\n");
+		double rsi14 = getData("rsi14");
+		log("RSI14: "+rsi14 + "\n");
+//		log("ADX: "+adx + "\n");
 //		log("macd1hist: "+macd1Hist);
 //		log("macd1sig: "+macd1Sig);
 		log("current Time: "+getTimeStamp());
