@@ -17,7 +17,7 @@ public class AdxAtr extends Strategy {
 
 	String symbol = "HINDUNILVR";
 	
-			initTALib("adx","adx", "14", "9", symbol, close );
+			initTALib("adx","adx", "14", "9", symbol, "close" );
 			context.setDataFrequency(2, Context.Frequency.DAY);
 			context.setSymbols(symbol);
 			context.setPortfolioValue(BigDecimal.valueOf(100000));
