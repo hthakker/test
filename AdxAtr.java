@@ -23,7 +23,7 @@ public class AdxAtr extends Strategy {
 			context.setSymbols(symbol);
 			context.setPortfolioValue(BigDecimal.valueOf(100000));
 			context.setDataType(Event.Type.BAR);
-            context.setStartDate("01-01-2011");
+            context.setStartDate("01-01-2012");
             context.setEndDate("31-12-2013");
 			log("Initialized");
 	}
